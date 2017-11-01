@@ -1,4 +1,4 @@
-package models
+package resources
 
 var (
 	q1 = "This is not a load bearing sandwich"

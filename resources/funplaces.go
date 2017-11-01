@@ -1,4 +1,4 @@
-package models
+package resources
 
 /*
 Food:
@@ -9,5 +9,4 @@ Vampire Dragonlords
 
 Trendy band:
 Bucket of Sad
-
 */

@@ -1,8 +1,8 @@
 package action
 
 import (
-	"UrbanRPG1/inputs"
-	"UrbanRPG1/model"
+	"SRPGCity/inputs"
+	"SRPGCity/model"
 	"fmt"
 )
 

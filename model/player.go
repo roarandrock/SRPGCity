@@ -18,6 +18,8 @@ type Player struct {
 	Name    string
 	Height  int
 	Loc     int
+	RoomId  int
+	Coord   []int
 	CurJorb Jorb
 }
 
@@ -97,6 +99,8 @@ func SetPlayerAll() {
 	currentPlayer.Name = "Ready"
 	currentPlayer.Height = 68
 	currentPlayer.Loc = 1
+	currentPlayer.RoomId = 1
+	currentPlayer.Coord = []int{1, 1}
 	//stats
 	currentPlayerStats.Stuff = 1
 	currentPlayerStats.Brands = 10

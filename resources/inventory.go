@@ -1,4 +1,4 @@
-package models
+package resources
 
 /*
 Accessories that provide buffs:

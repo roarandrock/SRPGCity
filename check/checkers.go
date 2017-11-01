@@ -1,7 +1,7 @@
 package check
 
 import (
-	"UrbanRPG1/model"
+	"SRPGCity/model"
 	"fmt"
 )
 
@@ -17,7 +17,7 @@ func ErrorCheck(err error) {
 func GameEndCheck() bool {
 	cont := goalAchievedCheck()
 	ct := models.GetTime()
-	if ct.DayN >= 10 {
+	if ct.EpN >= 2 {
 		cont = false
 	}
 	return cont

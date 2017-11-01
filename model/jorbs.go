@@ -14,6 +14,7 @@ type Jorb struct {
 	Schedule    []int
 	Minstats    Jorbmin
 	Impact      Jorbimpact
+	AttackMelee JorbAttackM //just this for now
 }
 
 //Jorbmin minimum stats needed
@@ -29,8 +30,16 @@ type Jorbimpact struct {
 	ImpactMeters PlayerMeters
 }
 
+type JorbAttackM struct {
+	Name  string
+	Id    int
+	Dmg   int
+	Descr string
+}
+
 //FirstJorb first job possible
 var FirstJorb Jorb
+var BasicJorbAttack JorbAttackM
 var SecondJorb Jorb
 var NoJorb Jorb
 var JorbBoard = []Jorb{}
@@ -72,10 +81,17 @@ func JorbDisplay(j1 Jorb) {
 
 //SetJorb sets initial job stats
 func SetJorb() {
+	//set FirstAttack
+	BasicJorbAttack.Name = "Punch"
+	BasicJorbAttack.Descr = "Haymaker!"
+	BasicJorbAttack.Id = 1
+	BasicJorbAttack.Dmg = 30
+	//set FirstJorb
 	FirstJorb.CompanyName = "Fun First Jorb Corp"
 	FirstJorb.Industry = "Software Testing"
 	FirstJorb.Title = "Entry Level"
 	FirstJorb.Schedule = []int{0, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1} //busy morning, working, then 1s
+	FirstJorb.AttackMelee = BasicJorbAttack
 
 	//Zero for all mins on first jorb
 	//ImpactMeters
